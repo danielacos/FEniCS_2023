@@ -1,0 +1,7 @@
+*.vtu
+*.pvd
+*.pvtu
+*.pdf
+*.xdmf
+*.h5
+.DS_Store
