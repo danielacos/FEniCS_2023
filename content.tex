@@ -97,10 +97,10 @@
 	\begin{proposition}[Mass conservation]
 		The total mass of tumor cells and nutrients is conserved: $$\alert{\frac{d}{dt}\int_\Omega (u(x,t)+n(x,t))dx=0}.$$
 	\end{proposition}
+	\vspace*{0.6cm}
 	\begin{proposition}[Pointwise bounds]
 		Let $u_0,v_0\in[0,1]$, then \alert{$u(t),n(t)\in[0,1]$} for a.e. $t\in(0,T)$.
 	\end{proposition}
-	\vspace*{0.6cm}
 \end{frame}
 \begin{frame}{Properties of the model}
 	\scriptsize
@@ -323,21 +323,38 @@
 	Parameters: $C_u=100$, $C_n=100\cdot 10^{-4}$, $P_0=125$,  $h\approx 0.14$.
 \end{frame}
 
+% \begin{frame}{Three tumors aggregation ($\chi_0=0$, $\Delta t=10^{-5}$)}
+% 	\scriptsize
+% 	\begin{figure}
+% 		\centering
+% 		\hspace*{-0.6cm}
+% 		\begin{tabular}{cccc}
+% 			&\hspace*{-1cm}$t=2.5\cdot 10^{-2}$ & \hspace*{-1cm}$t=5.0\cdot 10^{-2}$ & \hspace*{-1cm}$t=7.5\cdot 10^{-2}$ \\
+% 			\rotatebox[origin=c]{90}{\textbf{DG}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_DG_P0-125_dt-1e-5_nx-200_symmetric/tumor_DG-UPW_Pi1_u_i-2500_cropped.png}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_DG_P0-125_dt-1e-5_nx-200_symmetric/tumor_DG-UPW_Pi1_u_i-5000_cropped.png}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_DG_P0-125_dt-1e-5_nx-200_symmetric/tumor_DG-UPW_Pi1_u_i-7500_cropped.png}} \\
+% 			\rotatebox[origin=c]{90}{\textbf{FE}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_FEM_P0-125_dt-1e-5_nx-200_symmetric/tumor_FEM_u_i-2500_cropped.png}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_FEM_P0-125_dt-1e-5_nx-200_symmetric/tumor_FEM_u_i-5000_cropped.png}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_FEM_P0-125_dt-1e-5_nx-200_symmetric/tumor_FEM_u_i-7500_cropped.png}}
+% 		\end{tabular}
+% 		\caption{Tumor cells.}
+% 	\end{figure}
+% \end{frame}
 \begin{frame}{Three tumors aggregation ($\chi_0=0$, $\Delta t=10^{-5}$)}
 	\scriptsize
 	\begin{figure}
 		\centering
 		\hspace*{-0.6cm}
-		\begin{tabular}{cccc}
-			&\hspace*{-1cm}$t=2.5\cdot 10^{-2}$ & \hspace*{-1cm}$t=5.0\cdot 10^{-2}$ & \hspace*{-1cm}$t=7.5\cdot 10^{-2}$ \\
-			\rotatebox[origin=c]{90}{\textbf{DG}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_DG_P0-125_dt-1e-5_nx-200_symmetric/tumor_DG-UPW_Pi1_u_i-2500_cropped.png}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_DG_P0-125_dt-1e-5_nx-200_symmetric/tumor_DG-UPW_Pi1_u_i-5000_cropped.png}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_DG_P0-125_dt-1e-5_nx-200_symmetric/tumor_DG-UPW_Pi1_u_i-7500_cropped.png}} \\
-			\rotatebox[origin=c]{90}{\textbf{FE}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_FEM_P0-125_dt-1e-5_nx-200_symmetric/tumor_FEM_u_i-2500_cropped.png}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_FEM_P0-125_dt-1e-5_nx-200_symmetric/tumor_FEM_u_i-5000_cropped.png}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_FEM_P0-125_dt-1e-5_nx-200_symmetric/tumor_FEM_u_i-7500_cropped.png}}
+		\begin{tabular}{cc}
+		\hspace*{-1cm} DG & \hspace*{-1cm} FE \\
+		\animategraphics[autoplay,loop,width=5cm]{5}{img/animation/three_tumors/test_DG_P0-125_dt-1e-5_nx-200_symmetric/tumor/tumor_DG-UPW_Pi1_u_i_cropped-}{0}{75} &
+		\animategraphics[autoplay,loop,width=5cm]{5}{img/animation/three_tumors/test_FEM_P0-125_dt-1e-5_nx-200_symmetric/tumor/tumor_FEM_u_i_cropped-}{0}{75}
+		% \includemovie[autoplay]{5cm}{4.05cm}{img/three_tumors/test_DG_P0-125_dt-1e-5_nx-200_symmetric/tumor_DG-UPW_Pi1_u_reduced.mp4} &
+		% \includemovie[autoplay]{5cm}{4.05cm}{img/three_tumors/test_FEM_P0-125_dt-1e-5_nx-200_symmetric/tumor_FEM_u_reduced.mp4}
+		% \movie{}{img/three_tumors/test_DG_P0-125_dt-1e-5_nx-200_symmetric/tumor_DG-UPW_Pi1_u.gif} &
+		% \movie{}{img/three_tumors/test_FEM_P0-125_dt-1e-5_nx-200_symmetric/tumor_FEM_u.gif}
 		\end{tabular}
 		\caption{Tumor cells.}
 	\end{figure}
@@ -381,43 +398,73 @@
 % 	\end{figure}
 % \end{frame}
 
+% \begin{frame}{Three tumors aggregation ($\chi_0=10$, $\Delta t=6\cdot 10^{-5}$)}
+% 	\scriptsize
+% 	\begin{figure}
+% 		\centering
+% 		\hspace*{-0.6cm}
+% 		\begin{tabular}{cccc}
+% 			& \hspace*{-1cm}$t=7.5\cdot 10^{-3}$ & \hspace*{-1cm}$t=1.5\cdot 10^{-2}$ & \hspace*{-1cm}$t=4\cdot 10^{-2}$ \\
+% 			\rotatebox[origin=c]{90}{\textbf{DG}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_DG_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_DG-UPW_Pi1_u_i-1500_cropped.png}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_DG_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_DG-UPW_Pi1_u_i-3000_cropped.png}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_DG_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_DG-UPW_Pi1_u_i-8000_cropped.png}} \\
+% 			\rotatebox[origin=c]{90}{\textbf{FE}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_FEM_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_FEM_u_i-1500_cropped.png}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_FEM_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_FEM_u_i-3000_cropped.png}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_FEM_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_FEM_u_i-8000_cropped.png}}
+% 		\end{tabular}
+% 		\caption{Tumor cells.}
+% 	\end{figure}
+% \end{frame}
 \begin{frame}{Three tumors aggregation ($\chi_0=10$, $\Delta t=6\cdot 10^{-5}$)}
 	\scriptsize
 	\begin{figure}
 		\centering
 		\hspace*{-0.6cm}
-		\begin{tabular}{cccc}
-			& \hspace*{-1cm}$t=7.5\cdot 10^{-3}$ & \hspace*{-1cm}$t=1.5\cdot 10^{-2}$ & \hspace*{-1cm}$t=4\cdot 10^{-2}$ \\
-			\rotatebox[origin=c]{90}{\textbf{DG}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_DG_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_DG-UPW_Pi1_u_i-1500_cropped.png}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_DG_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_DG-UPW_Pi1_u_i-3000_cropped.png}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_DG_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_DG-UPW_Pi1_u_i-8000_cropped.png}} \\
-			\rotatebox[origin=c]{90}{\textbf{FE}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_FEM_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_FEM_u_i-1500_cropped.png}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_FEM_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_FEM_u_i-3000_cropped.png}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_FEM_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_FEM_u_i-8000_cropped.png}}
+		\begin{tabular}{cc}
+			\hspace*{-1cm} DG & \hspace*{-1cm} FE \\
+			\animategraphics[autoplay,loop,width=5cm]{5}{img/animation/three_tumors/test_DG_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor/tumor_DG-UPW_Pi1_u_i_cropped-}{0}{80} &
+			\animategraphics[autoplay,loop,width=5cm]{5}{img/animation/three_tumors/test_FEM_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor/tumor_FEM_u_i_cropped-}{0}{80}
+			% \includemovie[autoplay]{5cm}{4.05cm}{img/three_tumors/test_DG_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_DG-UPW_Pi1_u_reduced.mp4} &
+			% \includemovie[autoplay]{5cm}{4.05cm}{img/three_tumors/test_FEM_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_FEM_u_reduced.mp4}
 		\end{tabular}
 		\caption{Tumor cells.}
 	\end{figure}
 \end{frame}
+% \begin{frame}{Three tumors aggregation ($\chi_0=10$, $\Delta t=6\cdot 10^{-5}$)}
+% 	\scriptsize
+% 	\begin{figure}
+% 		\centering
+% 		\hspace*{-0.6cm}
+% 		\begin{tabular}{cccc}
+% 			& \hspace*{-1cm}$t=7.5\cdot 10^{-3}$ & \hspace*{-1cm}$t=1.5\cdot 10^{-2}$ & \hspace*{-1cm}$t=4\cdot 10^{-2}$ \\
+% 			\rotatebox[origin=c]{90}{\textbf{DG}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_DG_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_DG-UPW_Pi1_n_i-1500_cropped.png}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_DG_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_DG-UPW_Pi1_n_i-3000_cropped.png}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_DG_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_DG-UPW_Pi1_n_i-8000_cropped.png}} \\
+% 			\rotatebox[origin=c]{90}{\textbf{FE}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_FEM_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_FEM_n_i-1500_cropped.png}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_FEM_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_FEM_n_i-3000_cropped.png}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_FEM_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_FEM_n_i-8000_cropped.png}}
+% 		\end{tabular}
+% 		\caption{Nutrients.}
+% 	\end{figure}
+% \end{frame}
 \begin{frame}{Three tumors aggregation ($\chi_0=10$, $\Delta t=6\cdot 10^{-5}$)}
 	\scriptsize
 	\begin{figure}
 		\centering
 		\hspace*{-0.6cm}
-		\begin{tabular}{cccc}
-			& \hspace*{-1cm}$t=7.5\cdot 10^{-3}$ & \hspace*{-1cm}$t=1.5\cdot 10^{-2}$ & \hspace*{-1cm}$t=4\cdot 10^{-2}$ \\
-			\rotatebox[origin=c]{90}{\textbf{DG}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_DG_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_DG-UPW_Pi1_n_i-1500_cropped.png}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_DG_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_DG-UPW_Pi1_n_i-3000_cropped.png}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_DG_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_DG-UPW_Pi1_n_i-8000_cropped.png}} \\
-			\rotatebox[origin=c]{90}{\textbf{FE}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_FEM_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_FEM_n_i-1500_cropped.png}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_FEM_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_FEM_n_i-3000_cropped.png}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/three_tumors/test_FEM_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_FEM_n_i-8000_cropped.png}}
+		\begin{tabular}{cc}
+			\hspace*{-1cm} DG & \hspace*{-1cm} FE \\
+			\animategraphics[autoplay,loop,width=5cm]{5}{img/animation/three_tumors/test_DG_P0-125_chi-10_dt-5e-6_nx-200_symmetric/nutrients/tumor_DG-UPW_Pi1_n_i_cropped-}{0}{80}
+			&
+			\animategraphics[autoplay,loop,width=5cm]{5}{img/animation/three_tumors/test_FEM_P0-125_chi-10_dt-5e-6_nx-200_symmetric/nutrients/tumor_FEM_n_i_cropped-}{0}{80}
+			% \includemovie[repeat,autoplay]{5cm}{4.05cm}{img/three_tumors/test_DG_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_DG-UPW_Pi1_n_reduced.mp4}  &
+			% \includemovie[repeat,autoplay]{5cm}{4.05cm}{img/three_tumors/test_FEM_P0-125_chi-10_dt-5e-6_nx-200_symmetric/tumor_FEM_n_reduced.mp4}
 		\end{tabular}
 		\caption{Nutrients.}
-		\label{fig:test-1_2}
 	\end{figure}
 \end{frame}
 \begin{frame}{Three tumors aggregation ($\chi_0=0$, $\Delta t=10^{-5}$)}
@@ -463,44 +510,87 @@
 
 	Parameters: $C_u=2.8$, $C_n=2.8\cdot 10^{-4}$, $h\approx 0.28$, $P_0=0.5$, $\chi_0=0.1$, $\Delta t=0.1$.
 \end{frame}
+% \begin{frame}{Irregular tumor growth {\footnotesize (more tests in \cite{acosta2023structure})}}
+% 	\scriptsize
+% 	\begin{figure}
+% 		\centering
+% 		\hspace*{-0.6cm}
+% 		\begin{tabular}{ccccc}
+% 			& \hspace*{-1cm}$t=10.0$ & \hspace*{-1cm}$t=20.0$ & \hspace*{-1cm}$t=50.0$ \\
+% 			\rotatebox[origin=c]{90}{\textbf{Symmetric}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/irregular_shape/reference_test_symmetric/tumor_DG-UPW_Pi1_u_i-100_cropped.png}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/irregular_shape/reference_test_symmetric/tumor_DG-UPW_Pi1_u_i-200_cropped.png}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/irregular_shape/reference_test_symmetric/tumor_DG-UPW_Pi1_u_i-500_cropped.png}} \\
+% 			\rotatebox[origin=c]{90}{\textbf{Non-symmetric}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/irregular_shape/reference_test/tumor_DG-UPW_Pi1_u_i-100_cropped.png}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/irregular_shape/reference_test/tumor_DG-UPW_Pi1_u_i-200_cropped.png}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/irregular_shape/reference_test/tumor_DG-UPW_Pi1_u_i-500_cropped.png}}
+% 		\end{tabular}
+% 		\caption{Tumor cells.}
+% 	\end{figure}
+% \end{frame}
 \begin{frame}{Irregular tumor growth {\footnotesize (more tests in \cite{acosta2023structure})}}
 	\scriptsize
 	\begin{figure}
 		\centering
 		\hspace*{-0.6cm}
-		\begin{tabular}{ccccc}
-			& \hspace*{-1cm}$t=10.0$ & \hspace*{-1cm}$t=20.0$ & \hspace*{-1cm}$t=50.0$ \\
-			\rotatebox[origin=c]{90}{\textbf{Symmetric}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/irregular_shape/reference_test_symmetric/tumor_DG-UPW_Pi1_u_i-100_cropped.png}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/irregular_shape/reference_test_symmetric/tumor_DG-UPW_Pi1_u_i-200_cropped.png}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/irregular_shape/reference_test_symmetric/tumor_DG-UPW_Pi1_u_i-500_cropped.png}} \\
-			\rotatebox[origin=c]{90}{\textbf{Non-symmetric}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/irregular_shape/reference_test/tumor_DG-UPW_Pi1_u_i-100_cropped.png}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/irregular_shape/reference_test/tumor_DG-UPW_Pi1_u_i-200_cropped.png}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/irregular_shape/reference_test/tumor_DG-UPW_Pi1_u_i-500_cropped.png}}
+		\begin{tabular}{cc}
+			\hspace*{-1cm} Symmetric & \hspace*{-1cm} Non-symmetric \\
+			\animategraphics[autoplay,loop,width=5cm]{5}{img/animation/irregular_shape/reference_test_symmetric/tumor/tumor_DG-UPW_Pi1_u_i_cropped-}{0}{50} &
+			\animategraphics[autoplay,loop,width=5cm]{5}{img/animation/irregular_shape/reference_test/tumor/tumor_DG-UPW_Pi1_u_i_cropped-}{0}{50}
+
+			% \includemovie[autoplay]{5cm}{4.05cm}{img/irregular_shape/reference_test_symmetric/tumor_DG-UPW_Pi1_u_reduced.mp4} &
+			% \includemovie[autoplay]{5cm}{4.05cm}{img/irregular_shape/reference_test/tumor_DG-UPW_Pi1_u_reduced.mp4}
 		\end{tabular}
 		\caption{Tumor cells.}
 		\label{fig:test-2_reference}
 	\end{figure}
 \end{frame}
+% \begin{frame}{Irregular tumor growth {\footnotesize (more tests in \cite{acosta2023structure})}}
+% 	\scriptsize
+% 	\begin{figure}
+% 		\centering
+% 		\hspace*{-0.6cm}
+% 		\begin{tabular}{ccccc}
+% 			& \hspace*{-1cm}$t=10.0$ & \hspace*{-1cm}$t=20.0$ & \hspace*{-1cm}$t=50.0$ \\
+% 			\rotatebox[origin=c]{90}{\textbf{Symmetric}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/irregular_shape/reference_test_symmetric/tumor_DG-UPW_Pi1_n_i-100_cropped.png}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/irregular_shape/reference_test_symmetric/tumor_DG-UPW_Pi1_n_i-200_cropped.png}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/irregular_shape/reference_test_symmetric/tumor_DG-UPW_Pi1_n_i-500_cropped.png}} \\
+% 			\rotatebox[origin=c]{90}{\textbf{Non-symmetric}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/irregular_shape/reference_test/tumor_DG-UPW_Pi1_n_i-100_cropped.png}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/irregular_shape/reference_test/tumor_DG-UPW_Pi1_n_i-200_cropped.png}} &
+% 			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/irregular_shape/reference_test/tumor_DG-UPW_Pi1_n_i-500_cropped.png}}
+% 		\end{tabular}
+% 		\caption{Nutrients.}
+% 	\end{figure}
+% \end{frame}
 \begin{frame}{Irregular tumor growth {\footnotesize (more tests in \cite{acosta2023structure})}}
 	\scriptsize
 	\begin{figure}
 		\centering
 		\hspace*{-0.6cm}
-		\begin{tabular}{ccccc}
-			& \hspace*{-1cm}$t=10.0$ & \hspace*{-1cm}$t=20.0$ & \hspace*{-1cm}$t=50.0$ \\
-			\rotatebox[origin=c]{90}{\textbf{Symmetric}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/irregular_shape/reference_test_symmetric/tumor_DG-UPW_Pi1_n_i-100_cropped.png}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/irregular_shape/reference_test_symmetric/tumor_DG-UPW_Pi1_n_i-200_cropped.png}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/irregular_shape/reference_test_symmetric/tumor_DG-UPW_Pi1_n_i-500_cropped.png}} \\
-			\rotatebox[origin=c]{90}{\textbf{Non-symmetric}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/irregular_shape/reference_test/tumor_DG-UPW_Pi1_n_i-100_cropped.png}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/irregular_shape/reference_test/tumor_DG-UPW_Pi1_n_i-200_cropped.png}} &
-			\raisebox{-0.47\height}{\includegraphics[scale=0.145]{img/irregular_shape/reference_test/tumor_DG-UPW_Pi1_n_i-500_cropped.png}}
+		\begin{tabular}{cc}
+			\hspace*{-1cm} Symmetric & \hspace*{-1cm} Non-symmetric \\
+			\animategraphics[autoplay,loop,width=5cm]{5}{img/animation/irregular_shape/reference_test_symmetric/nutrients/tumor_DG-UPW_Pi1_n_i_cropped-}{0}{50} &
+			\animategraphics[autoplay,loop,width=5cm]{5}{img/animation/irregular_shape/reference_test/nutrients/tumor_DG-UPW_Pi1_n_i_cropped-}{0}{50}
+			% \includemovie[repeat,autoplay]{5cm}{4.07cm}{img/irregular_shape/reference_test_symmetric/tumor_DG-UPW_Pi1_n_reduced.mp4} &
+			% \includemovie[repeat,autoplay]{5cm}{4.07cm}{img/irregular_shape/reference_test/tumor_DG-UPW_Pi1_n_reduced.mp4}
 		\end{tabular}
 		\caption{Nutrients.}
 	\end{figure}
+\end{frame}
+
+\section{Future work}
+
+\begin{frame}{Future work}
+	\begin{itemize}\itemsep1em
+		\item Adapting the model to fit real data.
+		\item Coupling this model with fluid or porous media equations.
+		\item Carrying out an error analysis of the method.
+		\item Exploring other options to avoid restrictions on the mesh.
+		\item Extending this method to higher-order approximating polynomials.
+	\end{itemize}
 \end{frame}
 
 \begin{frame}{References}
